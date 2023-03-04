@@ -49,6 +49,7 @@
       <thead>
         <tr>
           <th>Email</th>
+          <th>Read Receipts</th>
           <th>Clicks</th>
         </tr>
       </thead>
@@ -56,7 +57,8 @@
         {% for key in trackers %}
         <tr>
           <td>{{ key }}</td>
-          <td>{{ trackers[key] }}</td>
+          <td>{{ trackers[key]["readreceipts"] }}</td>
+          <td>{{ trackers[key]["clicks"] }}</td>
         </tr>
         {% endfor %}
       </tbody>
@@ -67,7 +69,7 @@
       <img height="200px" src="https://www.humanlayersecurity.com/wp-content/uploads/2021/09/MarketingBrand2021-09-Calum-Heath-Why-We-Click-The-Psychology-Behind-Phishing-Scams-and-How-to-Avoid-Being-Hacked-Spot-1.jpg">
     </center>
   {% endif%}
-  
+
 </div>
 <script>
 setTimeout(function () {
