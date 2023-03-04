@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home - Angler Phish - Phishing Simulator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2 style="display:inline-block"><img height="50px" src="https://www.humanlayersecurity.com/wp-content/uploads/2021/09/MarketingBrand2021-09-Calum-Heath-Why-We-Click-The-Psychology-Behind-Phishing-Scams-and-How-to-Avoid-Being-Hacked-Spot-1.jpg"> Angler Phish</h2>
+  <small>(Phishing Simulator)</small>
+  <h4>Send Phishing Emails</h4>
+  {% if form_response: %}
+    {% if form_response["code"] == "success" %}
+      <div id="alert" class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        Phishing Emails Sent <strong>Successfully!</strong>
+      </div>
+    {% elif form_response["code"] == "failed" %}
+      <div id="alert" class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        Phishing Emails Sent <strong>Failed!</strong><br><br>
+        {{ form_response["message"] }}
+      </div>
+    {% endif %}
+  {% endif %}
+  <form class="form-inline" action="{{ url_for ('sendmail') }}" method="post">
+    <div class="form-group" style="width:84%;">
+      <input type="text" class="form-control" id="email" placeholder="Enter Emails" name="emails" style="width: 100%;">
+    </div>
+    <div class="form-group">
+      <select class="form-control" name="template" required>
+        {% for template in templates %}
+          <option value="{{template.id}}">{{template.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <small class="text-muted">Separate multiple emails by semi-colon (;)</small>
+  <br><br>
+  <h4>Clicks Tracker</h4>
+  {% if trackers|length > 0 %}
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Clicks</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for key in trackers %}
+        <tr>
+          <td>{{ key }}</td>
+          <td>{{ trackers[key] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    No one has fallen for the phishing mail yet
+    <center>
+      <img height="200px" src="https://www.humanlayersecurity.com/wp-content/uploads/2021/09/MarketingBrand2021-09-Calum-Heath-Why-We-Click-The-Psychology-Behind-Phishing-Scams-and-How-to-Avoid-Being-Hacked-Spot-1.jpg">
+    </center>
+  {% endif%}
+  
+</div>
+<script>
+setTimeout(function () {
+  $(".alert").alert('close')
+}, 5000);//5000=5 seconds
+</script>
+</body>
+</html>

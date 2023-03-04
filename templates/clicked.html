@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clicked - Angler Phish - Phishing Simulator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container" style="height:100%;">
+      <div class="jumbotron" style="height:100%;">
+        <h3>You clicked on a phishing link!</h3>
+        <p>
+          We recommend reading an article to learn about recognizing phishing
+          emails
+        </p>
+        <p class="lead">
+          Redirecting you in <span id="seconds">5</span> seconds...
+        </p>
+      </div>
+      <center><img src="https://www.humanlayersecurity.com/wp-content/uploads/2021/09/MarketingBrand2021-09-Calum-Heath-Why-We-Click-The-Psychology-Behind-Phishing-Scams-and-How-to-Avoid-Being-Hacked.gif" height="400px"></center>
+    </div>
+    <script>
+      var interval = null;
+      var seconds = 5;
+      setTimeout(() => {
+        window.location =
+          "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams";
+      }, 5000);
+      interval = setInterval(() => {
+        if (seconds === 0) {
+          clearInterval(interval);
+          return;
+        }
+        seconds -= 1;
+        document.querySelector("#seconds").innerText = seconds;
+      }, 1000);
+    </script>
+  </body>
+</html>
