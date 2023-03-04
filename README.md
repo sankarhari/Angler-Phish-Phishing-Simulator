@@ -6,47 +6,26 @@
 
 > **Disclaimer:** This phishing simulator (Angler Phish) is an academic project for a cyber security course to demonstrate the operation and risks of Phishing Attacks.
 > 
-> 
-> 
 > We do not advocate or support the use of Phishing Attacks for illegal purposes.
-> 
 > 
 > This application will not collect or store any information which affects the privacy of the email recipient. 
 
-
-
 **Screenshots:**
 
-
-
 Home page screenshot to sending phishing emails:
-
-![](C:\Users\Sankar\AppData\Roaming\marktext\images\2023-03-04-19-51-50-image.png)
-
-
+![](screenshot\Home%20Page%20Screenshot.png)
 
 Success response after sending the phishing emails:
-
-![](C:\Users\Sankar\AppData\Roaming\marktext\images\2023-03-04-19-53-30-image.png)
-
-
+![](screenshot\Home%20Page%20Screenshot%20-%20Success%20Response.png)
 
 Phishing email delivered to Mailbox:
-
-![](C:\Users\Sankar\AppData\Roaming\marktext\images\2023-03-04-20-12-23-image.png)
-
-
+![](screenshot\Phishing%20Email%20Mail%20Box.png)
 
 Screen when user clicked on the Phishing email link:
-![](C:\Users\Sankar\AppData\Roaming\marktext\images\2023-03-04-20-15-42-image.png)
-
-
+![](screenshot\Screen%20When%20Phishing%20Link%20Clicked.png)
 
 Home page showing number of times phishing email are opened by the users:
-
-![](C:\Users\Sankar\AppData\Roaming\marktext\images\2023-03-04-20-17-49-image.png)
-
-
+![](screenshot\Phishing%20Link%20Page.png)
 
 **Image Courtesy:** 
 
