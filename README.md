@@ -1,8 +1,8 @@
 # 
 
-### Angler Phish
+### Angler Phish - Phishing Simulator
 
-### Phishing Simulator
+
 
 > **Disclaimer:** This phishing simulator (Angler Phish) is an academic project for a cyber security course to demonstrate the operation and risks of Phishing Attacks.
 > 
@@ -10,8 +10,9 @@
 > 
 > This application will not collect or store any information which affects the privacy of the email recipient. 
 
+
+
 **Screenshots:**
-http://
 
 Home page screenshot to sending phishing emails:
 ![](screenshot/Home%20Page%20Screenshot.png)
@@ -27,6 +28,8 @@ Screen when user clicked on the Phishing email link:
 
 Home page showing number of times phishing email are opened by the users:
 ![](screenshot/Phishing%20Link%20Page.png)
+
+
 
 **Image Courtesy:** 
 
