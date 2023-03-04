@@ -11,21 +11,22 @@
 > This application will not collect or store any information which affects the privacy of the email recipient. 
 
 **Screenshots:**
+http://
 
 Home page screenshot to sending phishing emails:
-![](screenshot\Home%20Page%20Screenshot.png)
+![](screenshot/Home%20Page%20Screenshot.png)
 
 Success response after sending the phishing emails:
-![](screenshot\Home%20Page%20Screenshot%20-%20Success%20Response.png)
+![](screenshot/Home%20Page%20Screenshot%20-%20Success%20Response.png)
 
 Phishing email delivered to Mailbox:
-![](screenshot\Phishing%20Email%20Mail%20Box.png)
+![](screenshot/Phishing%20Email%20Mail%20Box.png)
 
 Screen when user clicked on the Phishing email link:
-![](screenshot\Screen%20When%20Phishing%20Link%20Clicked.png)
+![](screenshot/Screen%20When%20Phishing%20Link%20Clicked.png)
 
 Home page showing number of times phishing email are opened by the users:
-![](screenshot\Phishing%20Link%20Page.png)
+![](screenshot/Phishing%20Link%20Page.png)
 
 **Image Courtesy:** 
 
